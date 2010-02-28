@@ -22,7 +22,7 @@ end
 
 post '/guess/:deal' do 
   newdeal = 1 + rand(10)
-  guess = params[:callerinput]
+  guess = params[:CallerInput]
   if guess == '1' or guess == 'higher'
     if newdeal > params[:deal].to_i 
       gamestatus = "winner"
