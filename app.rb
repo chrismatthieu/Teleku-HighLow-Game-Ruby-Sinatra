@@ -42,7 +42,7 @@ post '/guess/:deal' do
   builder do |xml|
     xml.instruct!
     xml.phoneml do
-      xml.speak "the dealer randomly selected " + params[:deal].to_s
+      xml.speak "the dealer randomly selected " + newdeal.to_s
       xml.speak "you are a " + gamestatus     
       xml.speak "will his next number be higher or lower? press 1 or say higher or press 2 or say lower"
       xml.input "http://highlow.heroku.com/guess/" + newdeal.to_s, "options"=>"1,2,higher,lower"
