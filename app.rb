@@ -2,6 +2,10 @@ require 'rubygems'
 require 'sinatra'
 require 'builder'
 
+get '/' do
+  "HighLow is a <a href="teleku.com">Teleku Voice Application</a>"
+end
+
 post '/' do 
   session[:deal] = 1 + rand(10)
   builder do |xml|
