@@ -14,7 +14,7 @@ post '/' do
       xml.speak "welcome to the game of high low"
       xml.speak "the dealer randomly selected " + session[:deal].to_s
       xml.speak "will his next number be higher or lower? press 1 or say higher or press 2 or say lower"
-      xml.input "/guess", "options"=>"1,2,higher,lower"
+      xml.input "http://highlow.heroku.com/guess", "options"=>"1,2,higher,lower"
     end
   end
 end
@@ -46,7 +46,7 @@ post '/guess' do
       xml.speak "the dealer randomly selected " + session[:deal].to_s
       xml.speak "you are a " + gamestatus     
       xml.speak "will his next number be higher or lower? press 1 or say higher or press 2 or say lower"
-      xml.input "/guess", "options"=>"1,2,higher,lower"
+      xml.input "http://highlow.heroku.com/guess", "options"=>"1,2,higher,lower"
     end
   end
 end
